@@ -35,6 +35,15 @@ with open('randomSymbols.txt', newline="", encoding='utf-8') as openFile:
                     clearOut.append(i)
     print(clearOut)
 
+# заменям точку на запятую в файле
+
+with open('randomNumbers.txt', 'rt', encoding='utf-8') as openFile:
+    with open('outputFile4.txt', 'wt', encoding='utf-8') as outputFile:
+        for line in openFile:
+            outputFile.write(re.sub(regExp3, ',', line))
+
+# исправляем дату
+
 date_input = input('Enter a date(mm/dd/yyyy): ')
 correctDate = str(parse(date_input))
 correctDate = correctDate.split()
