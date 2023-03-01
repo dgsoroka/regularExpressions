@@ -22,7 +22,7 @@ with open('text.txt', newline="", encoding='utf-8') as openFile:
         for line in openFile:
             outputFile.write(re.sub(regExp3, 'заменаТочки', line))
 
-# поиск слов с пятью буквами и замена на 'пятибуквенное слово'
+# поиск слов с 5 буквами и замена на 'пятибуквенное слово'
 
 with open('text.txt', newline="", encoding='utf-8') as openFile:
     with open('output3.txt', 'wt', encoding='utf-8') as outputFile:
